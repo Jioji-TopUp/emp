@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="emp" extends="struts-default" namespace="/">
+		<action name="*Emp" class="empAction" method="{1}">
+			<result name="success" type="chain">listEmp</result>
+			<result name="fail">index.jsp</result>
+			<result name="list">ListEmp.jsp</result>
+			<result name="edit">EditEmp.jsp</result>
+		</action>
+		<action name="*Login" class="loginAction" method="{1}">
+			<result name="success" type="chain">listEmp</result>
+			<result name="login">Login.jsp</result>
+		</action>
+	</package>
+</struts>    
